@@ -1,0 +1,38 @@
+<script>
+    let jugador1 = prompt("Jugador 1: piedra, papel o tijera")
+    let jugador2 = prompt("Jugador 2: piedra, papel o tijera")
+
+    jugador1 = jugador1.toLowerCase()
+    jugador2 = jugador2.toLowerCase()
+
+    let validaJ1 = (jugador1 == "piedra" || jugador1 == "papel" || jugador1 == "tijera")
+    let validaJ2 = (jugador2 == "piedra" || jugador2 == "papel" || jugador2 == "tijera")
+
+    if (!validaJ1 || !validaJ2) {
+        console.log("Entrada no válida. Debe escribir: piedra, papel o tijera.")
+    } else {
+        if (jugador1 == jugador2) {
+            console.log("Empate")
+        } else if (
+            (jugador1 == "piedra" && jugador2 == "tijera") ||
+            (jugador1 == "tijera" && jugador2 == "papel") ||
+            (jugador1 == "papel" && jugador2 == "piedra")
+        ) {
+            console.log("Gana Jugador 1")
+        } else {
+            console.log("Gana Jugador 2")
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

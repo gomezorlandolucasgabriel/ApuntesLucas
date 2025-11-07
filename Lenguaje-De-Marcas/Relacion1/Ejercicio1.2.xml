@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno>
+        <nombre> Manuel </nombre>
+        <apellido> Rodriguez </apellido>
+        <edad> 19 </edad>
+        <email> manuelrodriguez19@gmail.com </email>
+    </alumno>
+
+    <alumno>
+        <nombre> Federico </nombre>
+        <apellido> García</apellido>
+        <edad> 22 </edad>
+        <email> Fedegarcia22@gmail.com </email>
+    </alumno>
+</alumnos>

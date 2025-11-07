@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE curso SYSTEM "curso.dtd">
+<curso>
+    <nombre>Informatica</nombre>
+    <profesor>Jaime Gozales</profesor>
+    <horas> 200 </horas>
+</curso>

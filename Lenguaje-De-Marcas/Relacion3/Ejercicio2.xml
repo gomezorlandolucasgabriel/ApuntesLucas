@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipo [
+    <!ELEMENT equipo (pokemon+)>
+    <!ELEMENT pokemon (nombre, tipo , nivel?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+]>
+<equipo>
+    <pokemon>
+        <nombre> Arcangel </nombre>
+        <tipo> Relampago </tipo>
+        <nivel> 100 </nivel>
+
+
+    </pokemon>
+
+
+</equipo>
+ 

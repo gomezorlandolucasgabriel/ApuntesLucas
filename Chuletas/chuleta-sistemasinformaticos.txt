@@ -1,0 +1,29 @@
+pwd     — imprime la ruta del directorio de trabajo actual.
+cd      — cambiar directorio (rutas absolutas/relativas, cd .., cd ~, cd -).
+ls      — listar contenido de directorios (opciones: -l, -a, -h).
+tree    — ver estructura en forma de árbol (puede requerir instalación).
+cp      — copiar archivos/directorios (opción -r para recursivo).
+mv      — mover o renombrar archivos/directorios.
+rm      — eliminar archivos/directorios (-r recursivo, -f forzar, -i preguntar).
+mkdir   — crear directorios (-p crea rutas intermedias).
+rmdir   — eliminar directorios vacíos.
+touch   — crear archivo vacío o actualizar timestamps.
+cat     — mostrar/concatenar contenido de archivos (opción -n numera).
+head    — mostrar primeras líneas de un archivo (-n N líneas).
+tail    — mostrar últimas líneas de un archivo (-n N; -f seguir en tiempo real).
+nano    — editor de texto sencillo en terminal (Ctrl+O guardar, Ctrl+X salir).
+less    — ver archivos paginados (navegación hacia arriba/abajo).
+vim/vi  — editores avanzados de texto en terminal.
+more    — paginador simple para ver archivos.
+find    — buscar archivos/directorios por criterios (name, type, mtime, size…).
+grep    — buscar patrones dentro de archivos (expresiones regulares, -r, -n, -i).
+echo    — mostrar texto/variables en salida estándar.
+exit    — cerrar la sesión del shell / salir.
+ps      — listar procesos en ejecución.
+kill    — enviar señal a procesos (ej. terminar).
+top     — monitor interactivo de procesos y uso de recursos.
+ping    — probar conectividad de red a un host.
+ifconfig/netstat — mostrar configuración/estado de red (herramientas de red).
+chmod   — cambiar permisos de archivos/directorios.
+chown   — cambiar propietario/grupo de archivos/directorios.
+useradd — crear cuentas de usuario.

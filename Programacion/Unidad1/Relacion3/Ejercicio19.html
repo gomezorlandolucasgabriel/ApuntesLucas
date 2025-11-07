@@ -1,0 +1,29 @@
+<script>
+    let tiempoEstacionado = parseInt(prompt("Introduzca el tiempo estacionado en horas"))
+    let coste = 0
+    let precio1 = (tiempoEstacionado * 5)
+    let precio2 = tiempoEstacionado * 4
+    let precio3 = (((tiempoEstacionado - 5) * 3) + 22) 
+
+    if (tiempoEstacionado >= 0 && tiempoEstacionado <= 2) {
+        coste = precio1
+        mensaje = "Tu tiempo estacionado cuesta " + coste + "€"
+    }
+    else if (tiempoEstacionado >= 2 && tiempoEstacionado <= 5) {
+        coste = precio2
+        mensaje = "Tu tiempo estacionado cuesta " + coste + "€"
+    }
+    else if (tiempoEstacionado > 5) {
+        coste = precio3
+        mensaje = "Tu tiempo estacionado cuesta " + coste + "€"
+    }
+    else {
+        mensaje = "No puedes estar en horas negativas  "
+    }
+
+
+
+
+
+    console.log(mensaje)
+</script>

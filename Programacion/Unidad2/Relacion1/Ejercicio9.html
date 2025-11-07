@@ -1,0 +1,19 @@
+<script>
+    //Crea un array vacío llamado `cola`.
+    // Añade los elementos `"cliente1"`, `"cliente2"` y `"cliente3"` al final del array.
+    // Simula el proceso de atender a los clientes eliminando el primero e imprime el cliente atendido y el estado de la cola.
+
+    let cola = []
+    cola.push("cliente1","cliente2","cliente3")
+    console.log(cola);
+    let clienteatendido = cola.shift()
+    console.log("he atendido a " + clienteatendido);
+    console.log("Clientes restantes " + cola);
+    clienteatendido = cola.shift()
+    console.log("he atendido a " + clienteatendido);
+    console.log("Clientes restantes " + cola);
+    clienteatendido = cola.shift()
+    console.log("he atendido a " + clienteatendido);
+    console.log("Clientes restantes " + cola);
+
+</script>

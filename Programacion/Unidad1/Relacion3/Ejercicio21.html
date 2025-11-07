@@ -1,0 +1,29 @@
+<script>
+let peso = Number(prompt("Introduzca su peso en kg (ej. 70.5):"))
+  let altura = Number(prompt("Introduzca su altura en metros (ej. 1.75):"))
+
+  if (peso <= 0 || altura  <= 0) {
+    console.log("Entrada no válida. Peso y altura deben ser mayores que 0.")
+  } else {
+    let imc = peso / (altura **2)
+    console.log("Tu IMC es: " + imc.toFixed(2))
+
+    if (imc < 18.5) {
+      console.log("Bajo peso")
+    } else if (imc < 25) {
+      console.log("Normal")
+    } else if (imc < 30) {
+      console.log("Sobrepeso")
+    } else {
+      console.log("Obesidad")
+    }
+  }
+
+
+
+
+
+
+
+    
+</script>

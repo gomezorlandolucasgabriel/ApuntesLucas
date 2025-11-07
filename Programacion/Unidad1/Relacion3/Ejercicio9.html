@@ -1,0 +1,17 @@
+<script>
+    let numero = prompt("Introduzca un número de dos dígitos:")
+    numero = Number(numero)
+
+    // if (numero1/10 >= 1 && numero1/10 < 10){
+    // ¿Qué pasa con los números negativos? En este código no lo hemos tenido en cuenta.
+
+    if (numero >= 10 && numero <= 99) {
+        // Creamos las variables dentro del if, porque solo se van a utilizar si el número tiene dos cifras.
+        let digitoDecenas = parseInt(numero / 10)
+        let digitoUnidades = numero % 10
+        let suma = digitoDecenas + digitoUnidades
+        console.log("El número tiene dos cifras, la suma de sus cifras es: " + suma)
+    } else {
+        console.log("El número no tiene dos cifras")
+    }
+</script>

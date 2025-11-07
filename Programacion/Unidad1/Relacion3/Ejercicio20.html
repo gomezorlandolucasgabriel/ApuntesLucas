@@ -1,0 +1,36 @@
+<script>
+let p = prompt("Introduzca su puntuación de crédito:")
+  let a = prompt("Introduzca sus años como cliente del banco:")
+
+  let puntuacion = Number(p)
+  let anios = Number(a)
+  let mensaje = ""
+
+  const PUNTUACIONLIMITE = 650
+  const ANIOSPREMIUM = 5
+  const ANIOSESTANDAR = 2
+  
+
+  if (!(puntuacion >= 0) || !(anios >= 0)) {
+    mensaje = "Entrada no válida. Introduzca valores numéricos no negativos."
+  } else {
+    if (puntuacion > PUNTUACIONLIMITE && anios < ANIOSESTANDAR) {
+      if (anios > PUNTUACIONLIMITE) {
+         mensaje = "Crédito premium aprobado"
+      }
+      else {
+         mensaje = "Crédito estándar aprobado"
+      }
+    } else {
+       mensaje = "Crédito rechazado"
+    }
+    console.log(mensaje);
+    
+  }
+
+
+
+
+
+    
+</script>

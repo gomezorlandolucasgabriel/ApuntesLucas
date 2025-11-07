@@ -1,0 +1,12 @@
+<script>
+    let segundosUsuario = Number(prompt("Introduzca cantidad de segundos:"))
+
+    let minutosTotales = parseInt(segundosUsuario / 60)
+    let segundos = segundosUsuario % 60
+
+    let horas = parseInt(minutosTotales / 60)
+    let minutos = minutosTotales % 60
+
+    console.log(segundosUsuario + " segundos son " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos")
+
+</script>

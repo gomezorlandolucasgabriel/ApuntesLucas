@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto>
+
+    <clase>
+
+        <alumno>
+            <nombre>Federico </nombre>
+            <edad> 14 </edad>
+            <notamedia> 3.5 </notamedia>
+        </alumno>
+        <alumno>
+            <nombre> Noah </nombre>
+            <edad> 16 </edad>
+            <notamedia> 5 </notamedia>
+        </alumno>
+
+
+    </clase>
+    <clase>
+        <alumnos>
+            <alumno>
+                <nombre> Manuel </nombre>
+                <edad> 12 </edad>
+                <notamedia> 6.5 </notamedia>
+            </alumno>
+            <alumno>
+                <nombre> Abel </nombre>
+                <edad> 20 </edad>
+                <notamedia> 1.5 </notamedia>
+            </alumno>
+
+        </alumnos>
+
+    </clase>
+
+</instituto>

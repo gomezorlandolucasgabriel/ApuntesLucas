@@ -1,0 +1,23 @@
+<script>
+//Solicitar un número entero. 
+//Dibujar una pirámide con tantas filas como indique el número.
+//Con espacios a la izquierda
+let numero = Number(prompt("Introduce un numero entero "))
+let salida = ""
+for (let i = 1; i <= numero; i++) {
+    salida = ""
+    for (let j = 1; j <= numero - i; j++) {
+        salida += " "
+    }
+    for (let k = 1; k <= i; k++) {
+        salida += "*"
+    }
+    console.log(salida)
+}   
+
+
+
+
+
+
+</script>

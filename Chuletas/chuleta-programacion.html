@@ -1,0 +1,140 @@
+<script>
+/* --------------------------
+   🧠 CHULETA JAVASCRIPT
+   Arrays, Matrices y Strings
+   -------------------------- */
+
+/* ========= ARRAYS ========= */
+
+// Crear arrays
+let numeros = [1, 2, 3]
+let frutas = ["manzana", "pera", "uva"]
+let mixto = [42, "Hola", true, {nombre: "Juan"}]
+let vacio = new Array()       // Array vacío
+let largo = new Array(5)      // Array con 5 espacios vacíos
+
+// Acceso y modificación
+console.log(frutas[0])        // 'manzana'
+frutas[1] = "banana"          // Cambia 'pera' por 'banana'
+
+// Longitud
+console.log(frutas.length)    // 3
+frutas.length = 2             // Trunca el array a 2 elementos
+
+// Acceso al último elemento
+console.log(frutas[frutas.length - 1]) // último tradicional
+console.log(frutas.at(-1))             // moderno y elegante
+
+// Añadir y eliminar
+frutas.push("mango")          // Añadir al final
+frutas.unshift("fresa")       // Añadir al inicio
+frutas.pop()                  // Elimina el último
+frutas.shift()                // Elimina el primero
+
+/* ========= RECORRIDOS ========= */
+
+let lista = [10, 20, 30, 40]
+
+// for clásico (con índice)
+for (let i = 0; i < lista.length; i++) {
+  console.log(`Elemento ${i}: ${lista[i]}`)
+}
+
+// while (mientras)
+let i = 0
+while (i < lista.length) {
+  console.log(lista[i])
+  i++
+}
+
+// for...of (moderno, sin índice)
+for (let valor of lista) {
+  console.log(`Valor: ${valor}`)
+}
+
+/* ========= MATRICES (arrays dentro de arrays) ========= */
+
+// Crear matriz (sala de cine)
+let salaDeCine = [
+  ["A1", "A2", "A3", "A4"],
+  ["B1", "B2", "B3", "B4"],
+  ["C1", "C2", "C3", "C4"]
+]
+
+// Acceder a elementos
+console.log(salaDeCine[1][2])   // "B3"
+
+// Modificar elemento
+salaDeCine[2][1] = "Reservado"  // C2 reservado
+
+// Recorrer matriz
+for (let fila = 0; fila < salaDeCine.length; fila++) {
+  for (let col = 0; col < salaDeCine[fila].length; col++) {
+    console.log(`Asiento: ${salaDeCine[fila][col]}`)
+  }
+}
+
+// Función: verificar disponibilidad
+function verificarDisponibilidad(sala, f, c) {
+  let asiento = sala[f][c]
+  if (asiento === "Reservado" || asiento === "Ocupado") {
+    return "No disponible"
+  }
+  return "Disponible"
+}
+
+/* ========= STRINGS ========= */
+
+// Crear strings
+let nombre = "Ana"
+let saludo = `Hola, ${nombre}!`
+
+// Concatenar
+let frase = "JavaScript" + " " + "rocks"
+let frase2 = `${nombre} aprende JavaScript`
+
+// Cambiar mayúsculas/minúsculas
+"hola".toUpperCase()   // "HOLA"
+"ADIOS".toLowerCase()  // "adios"
+
+// Cortar texto
+"Aprender JavaScript".slice(9, 19)  // "JavaScript"
+
+// Reemplazar
+"JS es divertido".replace("divertido", "poderoso")
+
+// Dividir texto
+"manzana, pera, mango".split(", ")  // ["manzana", "pera", "mango"]
+
+// Buscar texto
+let texto = "Aprender JS es genial"
+texto.includes("JS")         // true
+texto.indexOf("JS")          // 9
+texto.startsWith("Aprender") // true
+texto.endsWith("genial")     // true
+
+// Eliminar espacios
+"   hola   ".trim()  // "hola"
+
+// Longitud
+"Hola".length  // 4
+
+// Ejemplo: mensaje de bienvenida
+function crearMensajeBienvenida(nombreUsuario) {
+  let limpio = nombreUsuario.trim().toUpperCase()
+  return `¡BIENVENIDO, ${limpio}!`
+}
+console.log(crearMensajeBienvenida("  ana  "))  // ¡BIENVENIDO, ANA!
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

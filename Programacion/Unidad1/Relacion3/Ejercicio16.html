@@ -1,0 +1,17 @@
+<script>
+    let salario = Number(prompt(" Introduzca su salario anual"))
+
+    if (salario < 10000) {
+        console.log("Tienes que pagar 0% de impuestos");
+
+    }
+    else if (salario >= 10000 && salario <= 20000) {
+        console.log(" Tienes que pagar " + (salario * 0.1) + " de impuestos ")
+    }
+    else if (salario > 20000 && salario <= 40000) {
+        console.log(" Tienes que pagar " + (salario * 0.2) + " de impuestos")
+    }
+    else {
+        console.log("Tienes que pagar " + (salario * 0.3) + " de impuestos ")
+    }
+</script>

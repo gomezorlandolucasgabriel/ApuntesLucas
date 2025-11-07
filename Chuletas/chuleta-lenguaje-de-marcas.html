@@ -1,0 +1,101 @@
+<!-- 📘 CHULETA UD2 - HTML BÁSICO -->
+
+<!-- 1. HISTORIA -->
+<!-- HTML creado por Tim Berners-Lee (1989, CERN). Versiones:
+HTML 1.0 (1991): 18 etiquetas básicas.
+HTML 2.0 (1995): Formularios, métodos GET/POST.
+HTML 3.2 (1997): Tablas, scripts, alineación.
+HTML 4.01 (1999): CSS, id/class, accesibilidad.
+XHTML 1.0 (2000): Sintaxis estricta basada en XML.
+HTML5 (2014): Video, audio, APIs (canvas, geolocalización, storage). -->
+
+<!-- 2. ESTRUCTURA -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descripción.">
+  <title>Título</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>Encabezado</header>
+  <nav>Menú</nav>
+  <main>Contenido</main>
+  <footer>Pie</footer>
+</body>
+</html>
+
+<!-- 3. ETIQUETAS PRINCIPALES -->
+<!-- <!DOCTYPE html>: versión HTML -->
+<!-- <html>: raíz del documento -->
+<!-- <head>: metadatos, no visible -->
+<!-- <body>: contenido visible -->
+<!-- <header>, <main>, <footer>, <nav>: estructura semántica -->
+
+<!-- 4. METADATOS -->
+<!-- <meta charset="UTF-8"> codificación -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> diseño responsive -->
+<!-- <meta name="description"> descripción -->
+<!-- <meta name="author"> autor -->
+<!-- <meta name="keywords"> palabras clave (obsoleta) -->
+<!-- <title> título de pestaña -->
+<!-- <link rel="stylesheet" href=""> enlaza CSS -->
+
+<!-- 5. FORMATO DE TEXTO -->
+<h1>Título</h1>
+<h2>Subtítulo</h2>
+<p>Párrafo</p>
+<a href="url">Enlace</a>
+<b>Negrita</b> / <strong>Importante</strong>
+<i>Cursiva</i> / <em>Énfasis</em>
+<blockquote>Cita</blockquote>
+<br> (salto de línea)
+<hr> (línea horizontal)
+
+<!-- 6. IMÁGENES Y MULTIMEDIA -->
+<img src="imagen.jpg" alt="Descripción" width="600" height="400">
+<!-- Atributos: src (ruta), alt (texto alternativo), width/height -->
+<!-- Optimizar tamaño y usar srcset para responsive -->
+
+<figure>
+  <img src="foto.jpg" alt="Descripción">
+  <figcaption>Leyenda</figcaption>
+</figure>
+
+<!-- 7. ENLACES -->
+<a href="https://ejemplo.com" target="_blank">Externo</a>
+<a href="#seccion1">Ancla interna</a>
+<a href="mailto:info@ejemplo.com">Correo</a>
+<a href="archivo.pdf" download>Descargar</a>
+
+<!-- 8. FORMULARIOS -->
+<form action="procesar.php" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre">
+
+  <label for="email">Correo:</label>
+  <input type="email" id="email" name="email">
+
+  <label for="mensaje">Mensaje:</label>
+  <textarea id="mensaje" name="mensaje"></textarea>
+
+  <label for="opcion">Selecciona:</label>
+  <select id="opcion" name="opcion">
+    <option value="1">Opción 1</option>
+    <option value="2">Opción 2</option>
+  </select>
+
+  <input type="checkbox" id="acepto" name="acepto">
+  <label for="acepto">Acepto</label>
+
+  <input type="radio" id="r1" name="radio" value="r1">
+  <label for="r1">Sí</label>
+
+  <input type="radio" id="r2" name="radio" value="r2">
+  <label for="r2">No</label>
+
+  <button type="submit">Enviar</button>
+  <button type="reset">Borrar</button>
+</form>

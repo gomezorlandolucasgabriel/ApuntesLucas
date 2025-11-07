@@ -1,0 +1,27 @@
+<script>
+    let llamada = Number(prompt(" ¿Cual es la duracion de la llamada en minutos? "))
+    let coste = 0
+    if (llamada >= 0 && llamada < 3) {
+        mensaje = ("Tu llamada es gratuita");
+
+    }
+    else if (llamada >= 3 && llamada <= 10) {
+        coste = (llamada - 3) * 0.5
+        mensaje = ("Tu llamada cuesta " + coste + " €");
+
+    }
+    else if (llamada > 10) {
+        coste = ((llamada - 10) * 0.3) + 3.5
+        mensaje = ("Tu llamada cuesta " + coste + " €")
+    }
+    else {
+        mensaje = " ERROR "
+    }
+
+    console.log(mensaje)
+
+
+
+
+
+</script>

@@ -1,0 +1,26 @@
+<script>
+    let anio = prompt("Introduzca un año")
+    anio = Number(anio)
+
+    let divisible4 = (anio % 4 == 0)
+    let divisible100 = (anio % 100 == 0)
+    let divisible400 = (anio % 400 == 0)
+
+    let esBisiesto = ((divisible4 && !divisible100) || divisible400)
+
+    if (esBisiesto) {
+
+
+
+        console.log("El año introducido es bisiesto")
+
+
+    } else {
+
+
+        console.log("El año introducido NO es bisiesto")
+
+
+    }
+
+</script>

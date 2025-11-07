@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta>
+        <nombre> Limonada </nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre> Limon </nombre>
+                <peso> 5 kilogramos </peso>
+            </ingrediente>
+            <ingrediente>
+                <nombre> Azucar </nombre>
+                <peso> 300 gramos</peso>
+            </ingrediente>
+        </ingredientes>
+        <tiempodepreparacion> 15 minutos </tiempodepreparacion>
+    </receta>
+    <receta>
+        <nombre> Carne en salsa </nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre> Cabezada </nombre>
+                <peso> 10 kilogramos </peso>
+            </ingrediente>
+            <ingrediente>
+                <nombre> Salsa de tomate </nombre>
+                <peso> 6 kilogramos </peso>
+
+            </ingrediente>
+        </ingredientes>
+        <tiempodepreparacion> 3 horas </tiempodepreparacion>
+    </receta>
+</recetas>

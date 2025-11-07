@@ -1,0 +1,46 @@
+<script>
+
+let diaSemana = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+let temperaturaRegistrada = []
+
+let opciones = 0
+let temperaturaMasAlta = 0
+let temperaturaMasBaja = 0
+
+
+
+
+for (let i = 0; i < 7 ; i++) {
+    temperaturaRegistrada[i] = Number(prompt("Introduce la temperatura registrada ese dia " + diaSemana[i]))
+    console.log(diaSemana[i] + " hizo " + temperaturaRegistrada[i] + " grados ")
+    
+}
+
+opciones = Number(prompt("1. Mostrar la temperatura más alta registrada.\n2. Mostrar la temperatura más baja registrada.\n3. Calcular la temperatura promedio de la semana.\n4. Salir del programa."))
+
+while (opciones < 5 && opcciones > 0) {
+    
+    if (opciones == 1) {
+        for (let i = 0; i < diaSemana.length; i++) {
+            
+            if (temperaturaRegistrada[i] > temperaturaMasAlta ) {
+          temperaturaMasAlta = temperaturaRegistrada[i]
+            }
+                  
+        }
+        console.log(temperaturaMasAlta);
+        
+    }
+
+    else if (opciones == 2) {
+        
+    }
+
+
+    else if (opciones == 3) {
+        
+    }
+
+}
+
+</script>

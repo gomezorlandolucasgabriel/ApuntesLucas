@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuletas</title>
+</head>
+<body>  
+
+    <!--------------------------------------- HEADER --------------------------------------------->
+
+    <header>
+
+        <h1 id="titulo">Prueba H1</h1>
+
+        <nav>  <!-- Menu navegacion -->
+            <ul>  <!-- Lista desordenada -->
+                <li><a href="enlace.html" target="_blank">parte 1 con link</a></li> <!-- target="_blank" (te abre otra pestaña, ideal para enlaces externos) -->
+                <li><a href="enlace.html">parte 2 con link</a></li>
+                <li><p>parte 3 sin link</p></li>
+                <li><p>parte 4 sin link</p></li>
+            </ul>
+        </nav>
+
+
+        <ol>    <!-- Lista ordenada -->
+            <li><p>numero 1</p></li>
+            <li><p>numero 2</p></li>
+            <li><p>numero 3</p></li>
+        </ol>
+
+
+    </header>
+
+    <!--------------------------------------- BODY --------------------------------------------->
+
+    <main>
+
+        <section> <!-- Section -->
+
+            <h2>Primer Section</h2>
+            <p><b>hola mundo negrita</b></p>              <!-- b (Texto en negrita) -->
+            <p><i>hola mundo cursivo</i></p>              <!-- i (Texto en cursiva) -->
+
+            <blockquote>"Este es un ejemplo de una cita larga."</blockquote> <!-- blockquote (Contenido de otra fuente) -->
+
+        </section>
+
+        <section>
+            <h2>Segundo Section</h2>
+            <p><strong>hola mundo negrita importante</strong></p>   <!-- Strong (Texto negrita Importante) -->
+            <p><em>hola mundo significado especial</em></p>         <!-- em (Texto cursiva significado especial) -->
+        </section>
+
+        <!-- figure, solo se utiliza para imagenes con texto debajo -->
+        <section>
+            <figure> 
+                <!-- imagen (de la web)-->
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/cnne-212344-monkey-selfie.jpeg?c=16x9&q=h_833,w_1480,c_fill" alt="monito" width="300" height="150"> 
+                <!-- descripcion imagen -->
+                <figcaption>mono sin link</figcaption>
+            </figure>
+
+            <figure> 
+                <!-- imagen con enlace (local)-->
+                <a href="enlace.html"><img src="Captura de pantalla 2025-10-27 a las 13.36.20.png" alt="setup windows" width="300" height="150"></a> 
+                <!-- descripcion imagen -->
+                <figcaption>setup windows con link</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Videito</h2>
+            <video controls width="480" height="240" muted loop autoplay>
+                <source src="video-chuches.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section>
+            <p><a href="#titulo">Volver arriba</a></p>  <!-- enlaza un id, lleva a donde este en la pagina -->
+            <p><a href="mailto:info@ejemplo.com">Contacta con nosotros</a></p> <!-- abre la aplicacion de correos -->
+            <p><a href="documento.pdf" download>Descargar documento PDF</a></p> <!-- link descarga automatica -->
+        </section>
+
+        <section>
+            <img src="https://placehold.co/600x400/000000/FFF" alt="texto descriptivo">
+        </section>
+
+    </main>
+
+    <!--------------------------------------- FOOTER --------------------------------------------->
+
+    <footer>
+
+        <br> <!-- Espacion vacio -->
+
+        <hr> <!-- linea horizontal separadora -->
+
+        <p>Derechos reservados &copy; 2024</p> <!-- Derechos de autor -->
+
+    </footer>
+
+</body>
+</html>

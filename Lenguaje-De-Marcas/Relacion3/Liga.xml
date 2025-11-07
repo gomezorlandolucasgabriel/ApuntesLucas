@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "liga.dtd">
+<liga>
+  <entrenador>
+    <nombre>Ash</nombre>
+    <pokemon>
+      <nombre>Pikachu</nombre>
+      <tipo>Eléctrico</tipo>
+      <nivel>35</nivel>
+    </pokemon>
+    <pokemon>
+      <nombre>Bulbasaur</nombre>
+      <tipo>Planta</tipo>
+      <tipo>Veneno</tipo>
+      <nivel>30</nivel>
+    </pokemon>
+  </entrenador>
+  <entrenador>
+    <nombre>Misty</nombre>
+    <pokemon>
+      <nombre>Starmie</nombre>
+      <tipo>Agua</tipo>
+      <tipo>Psíquico</tipo>
+      <nivel>33</nivel>
+    </pokemon>
+    <pokemon>
+      <nombre>Psyduck</nombre>
+      <tipo>Agua</tipo>
+    </pokemon>
+  </entrenador>
+</liga>
