@@ -150,7 +150,7 @@ CHULETA DTD
 
 Estructura basica seria:
 
-  <!ELEMENT liga (entrenador)>
+    <!ELEMENT liga (entrenador)>
     <!ELEMENT entrenador (nombre, pokemon)>
     <!ELEMENT pokemon (nombre, tipo, nivel)>
     <!ELEMENT nombre (#PCDATA)>
@@ -175,14 +175,14 @@ En el caso de q fuese un DTD interno este seria un buen ejemplo:
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pokemon [
-  <!ELEMENT pokemon (nombre, tipo, nivel?)>
-  <!ELEMENT nombre (#PCDATA)>
-  <!ELEMENT tipo (#PCDATA)>
-  <!ELEMENT nivel (#PCDATA)>
+    <!ELEMENT pokemon (nombre, tipo, nivel?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
 ]>
 <pokemon>
-  <nombre>Pikachu</nombre>
-  <tipo>Eléctrico</tipo>
-  <nivel>3</nivel>
-  
+        <nombre>Pikachu</nombre>
+        <tipo>Eléctrico</tipo>
+        <nivel>3</nivel>
+
 </pokemon>
