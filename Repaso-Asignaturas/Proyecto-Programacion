@@ -1,0 +1,204 @@
+<script>
+
+    // -----------------------------------------------------  DECLARACION DE VARIABLES, ARRAYS Y CONSTANTES  --------------------------------------------------------------------------------------
+
+    // Arrays para guardar los recursos de la granja
+
+    let felicidadAnimales = ["❤️","❤️"]      // ❤️❤️❤️❤️ (0-4)
+    let alimentosDisponibles = ["🌾","🌾"]   // 🌾🌾🌾🌾 (0-4)
+    let estadoEstablo = ["💩","💩"]          // 💩💩💩💩💩💩 (0-6)
+    let iteracionesarray = ["-","-","-"]
+
+    // Variables
+
+    let iteraciones = 0  // 🕒🕒🕒 (0-3)
+    let aninimales = 0
+    let opcionMenuUsuario = 0
+    let frutaOForraje = 0
+    let cantidadAlimentoComprado = 0
+
+    // Mensajes Constantes
+
+    const MENSAJEMENU = "---------- Menu ----------- \n1. Alimentar animales \n2. Jugar con los animales \n3. Limpiar establo \n4. Comprar comida \n --------- Recursos -------- \n"
+    const MENSAJESTABLOMALESTADO = "❗El estado del establo esta muy mal❗\nRecuerda que puedes Limpiarlo con la opcion 3"
+    const MENSAJEFALTAALIMENTO = "❗Te falta Alimentos❗ \nRecuerda que puedes comprar mas alimentos con la opcion 4"
+    const MENSAJEALMACENLLENO = "❗Su almacen de alimentos esta lleno❗"
+    const MENSAJEFRUTAOFORRAJE = "Quieres alimentarlos con: \n1. Fruta🍎  \n2. Forraje🌾"
+    const MENSAJEERRORFRUTAOFORRAJE = "❗Opcion insertada incorrecta❗\n" + MENSAJEFRUTAOFORRAJE 
+    const MENSAJEALIMENTADOEXITO = "Se a alimentado a los animales con exito ✅"
+    const MENSAJELIMIADOEXITO = "Has limpiado su establo con exito ✅"
+    const MENSAJEERRORLIMPIADO = "❗No puedes limpiar tu establo. Ya esta perfecto❗"
+    const MENSAJETRESTURNOS = "Han pasado 3 turnos, tu establo se a ensuciado (+1💩)"
+    const MENSAJECOMPRAEXITO = "Su compra se a realizado con exito. ✅"
+    const MENSAJEJUGAREXITO = "Has jugado con tus animales con exito ✅ (+1❤️)(-1🌾)"
+
+
+
+    // -----------------------------------------------------  PROGRAMA PRINCIPAL  --------------------------------------------------------------------------------------
+
+    //Creacion de bucle para escoger opciones diferentin que acabe el programa (cada vuelta (+1🕒) Iteracion) (Actualmente bucle infinito)
+    while (aninimales < 99) {
+
+        // Preguntamos al Usuario la opcion que quira del menu
+        opcionMenuUsuario = Number(prompt(MENSAJEMENU + "Felicidad: " + felicidadAnimales + "\n" + "Alimentos: "+ alimentosDisponibles + "\n" + "Estado: " + estadoEstablo))
+
+        // Manejo de errores (numero valido entre el 1 y el 4)
+        while ((opcionMenuUsuario > 4) || (opcionMenuUsuario < 1) || ((opcionMenuUsuario % 1) != 0))  {
+            opcionMenuUsuario = Number(prompt("❗Opcion insertada incorrecta❗ \n" + MENSAJEMENU + "Felicidad: " + felicidadAnimales + "\n" + "Alimentos: "+ alimentosDisponibles + "\n" + "Estado: " + estadoEstablo))
+        }   
+
+        // ------------------------------------------------  1. ALIMENTAR  -------------------------------------------------------------
+
+        // Alimentar a los animales (No se puede alimentar con mas de 💩💩💩)
+            // Alimentras con forraje (-1🌾)
+            // Alimentar con 🍎frutas (-1🌾)(+1❤️)
+        if (opcionMenuUsuario == 1) {
+
+            // Estado esta muy mal
+            if (estadoEstablo.length > 3) {
+                alert(MENSAJESTABLOMALESTADO)
+            }
+
+            // No quedan alimentos
+            else if (alimentosDisponibles.length < 1) {
+                alert(MENSAJEFALTAALIMENTO)
+            }
+            
+            // Hay suficiente comida y el establo esta limpio
+            else{
+
+                // Pedir al Usuario fruta o forraje
+                frutaOForraje = Number(prompt(MENSAJEFRUTAOFORRAJE))
+
+                // Manejo de error
+                while ((frutaOForraje != 1) && (frutaOForraje != 2))  {
+                    frutaOForraje = Number(prompt(MENSAJEERRORFRUTAOFORRAJE))
+                
+                }
+
+                // Opcion Fruta
+                if (frutaOForraje == 1) {
+                    
+                    alimentosDisponibles.pop()
+                    felicidadAnimales.push("❤️")
+                }
+
+                // Opcion Forraje
+                else{
+                    alimentosDisponibles.pop()
+                    
+                }
+
+                alert(MENSAJEALIMENTADOEXITO)
+
+            }
+
+        }
+
+
+        // ------------------------------------------------  2. JUGAR  -------------------------------------------------------------
+
+        // Jugar con animales (No se puede jugar con mas de 💩💩💩) / (+1❤️)(-1🌾)
+        else if (opcionMenuUsuario == 2) {
+
+       
+            //Jugar con los animales con exito
+            if ((estadoEstablo.length <= 3) && (alimentosDisponibles.length > 0)) {
+
+                felicidadAnimales.push("❤️")
+                alimentosDisponibles.pop()
+
+                alert(MENSAJEJUGAREXITO)
+            }
+
+            //Jugar con los animales ERROR
+            else{
+
+                // Falta limpiar establo
+                if (estadoEstablo.length >= 3) {
+                    alert(MENSAJESTABLOMALESTADO)
+                }
+
+                // Falta alimento
+                else{
+                    alert(MENSAJEFALTAALIMENTO)
+                }
+            }
+
+        }
+
+        
+        // ------------------------------------------------  3. LIMPIAR  -------------------------------------------------------------
+
+
+        // Limpiar establo (Elimina todos los 💩 acumulados)
+        else if (opcionMenuUsuario == 3) {
+            
+            // Se limpia el establo
+            if (estadoEstablo.length > 0) {
+
+                estadoEstablo = []
+
+                alert(MENSAJELIMIADOEXITO)
+
+            }
+
+            
+            // No se puede limpiar el establo
+            else{
+                alert(MENSAJEERRORLIMPIADO)
+            }
+        }
+
+        // ------------------------------------------------  4. COMPRAR  -------------------------------------------------------------
+
+
+        // Comprar comida (Llena los alimentos al maximo 🌾)
+        else {
+            
+            // Compra con exito
+            if (alimentosDisponibles.length < 4) {
+
+                //Bucle de comprar alimentos
+                for (let i = alimentosDisponibles.length; i < 4; i++) {
+                    alimentosDisponibles.push("🌾")
+
+                    //Contador de alimentos comprados
+                    cantidadAlimentoComprado++
+                
+                }
+
+                alert(MENSAJECOMPRAEXITO + "(+" + cantidadAlimentoComprado + "🌾)")
+
+                cantidadAlimentoComprado = 0
+
+            }
+
+            // Compra cancelada
+            else {
+                alert(MENSAJEALMACENLLENO)
+            }
+
+        }
+
+        // ------------------------------------------------  🕒ITERACIONES🕒  -------------------------------------------------------------
+
+        // Si las iteraciones🕒 llegan a 3, se reinicia a 0 y (+1💩)(-1❤️)
+        iteraciones++
+
+        if (iteraciones >= 3) {
+
+            if (estadoEstablo.length <= 6) {
+                estadoEstablo.push("💩")
+            }
+
+            felicidadAnimales.pop()
+
+            alert(MENSAJETRESTURNOS)
+            
+            iteraciones = 0
+        }
+
+    }
+
+</script>
