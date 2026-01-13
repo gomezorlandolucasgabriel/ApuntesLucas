@@ -1,0 +1,328 @@
+<script>
+    // funcion de generar el mercado aleatorio
+    function generoMercado() {
+        let mercadoActual = [];
+        //solo cuando hay menos de 4 elementos en el mercado
+        while (mercadoActual.length < 4) {
+            let numeroObjeto = Math.floor(Math.random() * 8);
+
+            if (!mercadoActual.includes(MERCADO[numeroObjeto])) {
+                mercadoActual.push(MERCADO[numeroObjeto]);
+            }
+        }
+        return mercadoActual;
+    }
+    // declaro variables
+    const MAXIMODEMORAL = 4;
+    const MAXIMODEOXIGENODISPONIBLE = 4;
+    const MAXIMODEINSTALACIONES = 6;
+    const EMOJIMORAL = "😊";
+    const EMOJIOXIGENODISPONIBLE = "🪐";
+    const EMOJIDEINSTALACIONES = "⚠️";
+    const OPCION1 = 1;
+    const OPCION2 = 2;
+    const OPCION3 = 3;
+    const OPCION4 = 4;
+    const OPCION5 = 5;
+    const MAXIMODANIO = 3;
+    const JUEGO1 = 1;
+    const JUEGO2 = 2;
+    const MINIMODEENERGIAPARAJUGAR = 100;
+    const MAXNIVELDEDANIO1 = 3;
+    const MAXNIVELDEDANIO2 = 4;
+    const PRECIOMERCADO = [200, 500, 150, 300, 400, 100, 350, 600];
+    const MERCADO = [
+        "Generador Secundario - 200",
+        "Módulo de Recreación - 500",
+        "Sistema de Reparación automática - 150",
+        "Filtro Avanzado de Oxígeno - 300",
+        "Cápsula de Emergencia - 400",
+        "Refuerzo de Estructuras - 100",
+        "Panel Solar Mejorado - 350",
+        "Depósito de Recursos - 600",
+    ];
+    const MAXIMODEPOBLACION = 100;
+    const MINIMODEPOBLACION = 0;
+    const MINIMODEENERGIAPARAQUEACABEELJUEGO = 50;
+    const OXIGENOPARAACABAJRJUEGO = 0;
+    const SIHAYEVENTOALEATORIO = 1;
+    const EVENTO1 = 1;
+    const EVENTO2 = 2;
+    const EVENTO3 = 3;
+    const FINEVENTO = 0;
+
+    let moral = [];
+    let oxigenoDisponible = [];
+    let instalaciones = [];
+    let inventario = [];
+    // enuncia función
+    let mercadoDelJuego = generoMercado();
+    let opciones = "";
+    let juegosParaElegir = "";
+    let jugar = true;
+    let energia = 500;
+    let contadorDeAcciones = 0;
+    let energiaAleatoria = 0;
+    let productoComprado = "";
+    let precioProducto = 0;
+    let indice = "";
+    let poblacion = 10;
+    let llegadas = 0;
+    let perdidas = 0;
+    let eventoActual = "Ninguno";
+    let duracionEventoAleatorio = 0;
+    let probabilidadDelEvento = "";
+    let tipoDeEvento = 0;
+    // enuncio array moral
+    for (let i = 0; i < MAXIMODEMORAL; i++) {
+        moral.push(EMOJIMORAL);
+    }
+
+    // enuncio array oxigeno
+    for (let i = 0; i < MAXIMODEOXIGENODISPONIBLE; i++) {
+        oxigenoDisponible.push(EMOJIOXIGENODISPONIBLE);
+    }
+
+    while (jugar) {
+        opciones = Number(
+            prompt(
+                "Moral: " +
+                moral.join(" ") +
+                "\nOxigeno disponible: " +
+                oxigenoDisponible.join(" ") +
+                "\nInstalaciones: " +
+                instalaciones.join(" ") +
+                "\nEnergia: " +
+                energia + "kWh" +
+                "\nPoblación: " +
+                poblacion +
+                "\nInventario: " +
+                inventario +
+                "\n\n" +
+                OPCION1 +
+                "- Generar Oxigeno" +
+                "\n" +
+                OPCION2 +
+                "- Mejorar el moral" +
+                "\n" +
+                OPCION3 +
+                "- Reparar instalaciones" +
+                "\n" +
+                OPCION4 +
+                "- Recolectar Energia" +
+                "\n" +
+                OPCION5 +
+                "- Mercado"
+            )
+        );
+
+        // opcion 1 Generar Oxígeno
+        if (opciones == OPCION1) {
+            if (instalaciones.length >= MAXIMODANIO) {
+                alert("Ha habido un problema, repara las instalaciones");
+            } else {
+                if (oxigenoDisponible.length >= MAXIMODEOXIGENODISPONIBLE) {
+                    alert("Ya tienes el maximo de oxigeno disponible");
+                } else {
+                    oxigenoDisponible.push(EMOJIOXIGENODISPONIBLE);
+                    energia -= 50;
+                    contadorDeAcciones++;
+                }
+            }
+        }
+
+        // opcion 2 Mejorar la Moral
+        else if (opciones == OPCION2) {
+            juegosParaElegir = Number(
+                prompt(
+                    "Elije entre estas actividades: " +
+                    "\n" +
+                    JUEGO1 +
+                    "- Juegos y Conversaciones (Coste de Energia = 0 kWh)" +
+                    "\n" +
+                    JUEGO2 +
+                    "- Sesion de Peliculas (Coste de Energia = 100 kWh)"
+                )
+            );
+
+            // Juego 1, Gratis
+            if (juegosParaElegir == JUEGO1) {
+                if (
+                    instalaciones.length >= MAXNIVELDEDANIO1 ||
+                    moral.length == MAXIMODEMORAL
+                ) {
+                    alert(
+                        "Error, o tienes que arreglar las instalaciones o ya tienes la moral al maximo"
+                    );
+                } else {
+                    moral.push(EMOJIMORAL);
+                    oxigenoDisponible.pop();
+                    contadorDeAcciones++;
+                }
+            }
+
+            // Juego 2, cuesta 100 kWh
+            else if (juegosParaElegir == JUEGO2) {
+                if (
+                    instalaciones.length >= MAXNIVELDEDANIO1 ||
+                    energia < MINIMODEENERGIAPARAJUGAR
+                ) {
+                    alert(
+                        "Algo ha salido mal, arregla las instalaciones o consigue energia"
+                    );
+                } else if (moral.length >= MAXIMODEMORAL) {
+                    alert("Moral al máximo");
+                } else {
+                    moral.push(EMOJIMORAL);
+                    //al tener que sumar 2 de moral, suma una y la segunda revisa que se puedan añadir todavia
+                    if (moral.length < MAXIMODEMORAL) {
+                        moral.push(EMOJIMORAL);
+                    }
+                    energia -= 100;
+                    contadorDeAcciones++;
+                }
+            }
+        }
+
+        // opcion 3, Reparar instalaciones
+        else if (opciones == OPCION3) {
+            instalaciones.length = 0;
+            contadorDeAcciones++;
+        }
+
+        // opcion 4, Recolectar Energía
+        else if (opciones == OPCION4) {
+            if (instalaciones.length >= MAXNIVELDEDANIO2) {
+                alert("Demasiados daños en las instalaciones, arréglalos");
+            } else {
+                //si tuvieramos en accion el evento de tormenta de polvo EVENTO ALEATRIO
+                if (eventoActual == "Tormenta de Polvo") {
+                    energiaAleatoria = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+
+                }
+                // si no estuviera la tormenta
+                else {
+                    energiaAleatoria = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
+                }
+                energia += energiaAleatoria;
+                contadorDeAcciones++;
+            }
+        }
+
+        // opcion 5, Mercado
+        else if (opciones == OPCION5) {
+            elegirCompra = Number(
+                prompt(
+                    "Elije lo que quieras comprar del mercado (0-3): " +
+                    "\n" +
+                    mercadoDelJuego.join(", ")
+                )
+            );
+
+            if (elegirCompra >= 0 && elegirCompra <= 3) {
+
+                // lo que hace es conectar lo que hayas elegido con el producto del mercado y el precio
+                productoComprado = mercadoDelJuego[elegirCompra];
+                // para ver si lo ha comprado ya antes o no
+                if (inventario.includes(productoComprado)) {
+                    alert("Este objeto ya lo has comprado antes")
+                } else {
+                    indice = MERCADO.indexOf(productoComprado);
+                    precioProducto = PRECIOMERCADO[indice];
+
+                    // control de precio, si tienes para comprar el producto o no
+                    if (energia >= precioProducto) {
+                        energia -= precioProducto;
+                        inventario.push(productoComprado);
+                        alert(
+                            "Has comprado " +
+                            productoComprado +
+                            ". Dinero restante: " +
+                            energia +
+                            "kWh"
+                        );
+                        contadorDeAcciones++;
+                    } else {
+                        alert("No tienes suficiente dinero");
+                    }
+                }
+            } else {
+                alert("Algo ha fallado");
+            }
+        }
+
+        // cada acción mueren y llegan nuevos colonos
+        llegadas = Math.floor(Math.random() * 10) + 1;
+        perdidas = Math.floor(Math.random() * 5) + 1;
+        poblacion += llegadas - perdidas;
+
+        // cada 3 acciones:
+        if (contadorDeAcciones > 0 && contadorDeAcciones % 3 == 0) {
+            instalaciones.push(EMOJIDEINSTALACIONES);
+            moral.pop();
+        }
+
+        // cada 5 acciones:
+        if (contadorDeAcciones > 0 && contadorDeAcciones % 5 == 0) {
+            mercadoDelJuego = generoMercado();
+            alert("Corre a ver el mercado, ¡Se ha actualizado!");
+        }
+
+        // si pasa algo de esto, se acaba el juego
+        if (
+            poblacion < MINIMODEPOBLACION ||
+            poblacion >= MAXIMODEPOBLACION ||
+            energia < MINIMODEENERGIAPARAQUEACABEELJUEGO ||
+            oxigenoDisponible.length == OXIGENOPARAACABAJRJUEGO
+        ) {
+            jugar = false;
+            alert("Fin del juego, sobrepasaste el maximo de poblacion, te quedaste sin energia o sin oxigeno")
+        }
+
+        //eventos aleatorios
+        if (
+            contadorDeAcciones > 0 &&
+            contadorDeAcciones % 5 == 0 &&
+            duracionEventoAleatorio == 0
+        ) {
+            //probabilidad de un 50% de que pase o no
+            probabilidadDelEvento = Math.floor(Math.random() * 2);
+
+            if (probabilidadDelEvento == SIHAYEVENTOALEATORIO) {
+                tipoDeEvento = Math.floor(Math.random() * 3) + 1;
+                duracionEventoAleatorio = 3;
+
+                //tipos de eventos
+                if (tipoDeEvento == EVENTO1) {
+                    eventoActual = "Tormenta de Polvo";
+                    alert("¡TORMENTA DE POLVO! Revise los paneles solares");
+                } else if (tipoDeEvento == EVENTO2) {
+                    eventoActual = "Frío Extremo";
+                    alert(" ¡FRÍO EXTREMO! La moral caerá cada turno");
+                } else if (tipoDeEvento == EVENTO3) {
+                    eventoActual = "Celebración Inesperada";
+                    alert("¡CELEBRACIÓN! La moral sube automáticamente");
+                }
+            }
+        }
+
+        // si aun quedan acciones se efectuan los eventos, depende del que haya tocado claro, duran 3 acciones
+        if (duracionEventoAleatorio > 0) {
+            if (eventoActual == "Frío Extremo") {
+                moral.pop();
+            } else if (eventoActual == "Celebración Inesperada") {
+                if (moral.length < MAXIMODEMORAL) {
+                    moral.push(EMOJIMORAL);
+                }
+                //la tercera está en la opcion 4
+            }
+            duracionEventoAleatorio--;
+
+            // acaba evento aleatorio
+            if (duracionEventoAleatorio == FINEVENTO) {
+                alert("Fin del evento aleatorio");
+                eventoActual = "Ninguno";
+            }
+        }
+    }
+</script>
