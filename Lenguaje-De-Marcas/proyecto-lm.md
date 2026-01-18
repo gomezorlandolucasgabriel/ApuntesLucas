@@ -63,8 +63,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <parking xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="parking.xsd">
-  <!-- pega aquí TODO tu contenido EXACTO (igual que el original) -->
-</parking
+  <!-- pega aquí TODO el contenido exactamente igual al parking.xml original -->
+</parking>
+
 
 
 //validaciones/parking.xsd
@@ -181,8 +182,9 @@ parking_viewx.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="parking.xsl"?>
 <parking>
-  <!-- pega aquí TODO tu contenido EXACTO (igual que el original) -->
+  <!-- pega aquí TODO el contenido exactamente igual al parking.xml original -->
 </parking>
+
 
 
 parking.xsl
@@ -305,6 +307,7 @@ index.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web informativa del Parking GUEMI: ocupación, tarifas, abonados y registro de accesos.">
   <title>Parking GUEMI - Inicio</title>
 </head>
 <body>
@@ -312,8 +315,8 @@ index.html
     <h1>Parking GUEMI</h1>
 
     <figure>
-      <img src="img/logo.png" alt="Logo Parking GUEMI" width="140">
-      <figcaption>Aplicación informativa del parking</figcaption>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Parking GUEMI Centro · Información y gestión</figcaption>
     </figure>
 
     <nav>
@@ -323,35 +326,79 @@ index.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="visualizacion.html">Visualización</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>Accesos rápidos</h2>
-      <ul>
-        <li><a href="parking_view.xml">Abrir XML con XSLT (recomendado)</a></li>
-        <li><a href="Validaciones/parking.xml">Ver XML original</a></li>
-        <li><a href="https://www.parking-guemi.es" target="_blank" rel="noopener">Web externa</a></li>
-      </ul>
+      <h2>Bienvenido</h2>
+      <p>
+        Esta web muestra información del <strong>Parking GUEMI Centro</strong>.
+        Aquí podrás consultar tarifas, plazas, abonados y el registro de accesos.
+      </p>
+
+      <article>
+        <h3>Accesos rápidos</h3>
+        <ul>
+          <li><a href="tarifas.html">Ver tarifas</a></li>
+          <li><a href="plazas.html">Ver plazas y estados</a></li>
+          <li><a href="visualizacion.html">Ver el XML transformado con XSLT</a></li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Información práctica</h3>
+        <table style="border: 1px solid black;" cellpadding="6" cellspacing="2" width="100%">
+          <tr>
+            <th scope="col">Dato</th>
+            <th scope="col">Detalle</th>
+          </tr>
+          <tr>
+            <td>Ubicación</td>
+            <td>C/ Gran Vía 123, Zona Centro (inventado)</td>
+          </tr>
+          <tr>
+            <td>Horario de atención</td>
+            <td>L-V 08:00 a 20:00 · Sábados 09:00 a 14:00 (inventado)</td>
+          </tr>
+          <tr>
+            <td>Contacto rápido</td>
+            <td>Tel. 900 123 456 · Email: info@parking-guemi.es (inventado)</td>
+          </tr>
+          <tr>
+            <td>Enlace externo</td>
+            <td><a href="https://www.parking-guemi.es" target="_blank" rel="noopener">Web oficial</a></td>
+          </tr>
+        </table>
+      </article>
     </section>
 
     <section>
-      <h2>Resumen</h2>
-      <article>
-        <p>La visualización obligatoria se hace mediante XSLT (archivo <strong>parking.xsl</strong>).</p>
-      </article>
+      <h2>Normas de uso (resumen)</h2>
+      <ol>
+        <li>Respeta la señalización y límites de velocidad.</li>
+        <li>Estaciona dentro de las líneas y deja espacio de paso.</li>
+        <li>Si una plaza está en mantenimiento, no la utilices.</li>
+        <li>En plazas PMR, aparcar solo con autorización.</li>
+      </ol>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p>
+      <a href="https://www.parking-guemi.es/legal" target="_blank" rel="noopener">Nota legal</a>
+      · <a href="contacto.html">Contacto</a>
+    </p>
   </footer>
 </body>
 </html>
+
 
 visualizacion.html
 
@@ -361,11 +408,16 @@ visualizacion.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parking GUEMI - Visualización</title>
+  <meta name="description" content="Visualización del XML del Parking GUEMI mediante XSLT.">
+  <title>Parking GUEMI - Visualización XML</title>
 </head>
 <body>
   <header>
     <h1>Parking GUEMI</h1>
+    <figure>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Visualización del XML con XSLT</figcaption>
+    </figure>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -373,27 +425,46 @@ visualizacion.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="visualizacion.html">Visualización</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>XML dentro del HTML (iframe)</h2>
-      <p>Mostrando el XML enlazado con XSLT:</p>
+      <h2>Ver datos desde el XML</h2>
+      <p>
+        El archivo recomendado para visualizar es:
+        <a href="parking_view.xml">parking_view.xml</a>
+      </p>
 
-      <iframe src="parking_view.xml" width="100%" height="550px"></iframe>
+      <article>
+        <h3>¿Qué verás?</h3>
+        <ul>
+          <li>Tarifas del parking.</li>
+          <li>Plazas con atributos (id, planta, tipo, estado).</li>
+          <li>Abonados (vigencias y tarifa asociada).</li>
+          <li>Registro de accesos (entradas y salidas).</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Vista incrustada (opcional)</h2>
+      <p>Si tu navegador lo permite, aquí aparece la transformación dentro de la web:</p>
+      <iframe src="parking_view.xml" width="100%" height="560"></iframe>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p><a href="index.html">Inicio</a> · <a href="https://www.parking-guemi.es" target="_blank" rel="noopener">Web externa</a></p>
   </footer>
 </body>
 </html>
-
 
 //contacto.html
 
@@ -402,12 +473,17 @@ visualizacion.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de contacto del Parking GUEMI.">
   <title>Parking GUEMI - Contacto</title>
 </head>
 <body>
   <header>
     <h1>Parking GUEMI</h1>
-    <img src="img/logo.png" alt="Logo Parking GUEMI" width="140">
+    <figure>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Atención al cliente</figcaption>
+    </figure>
+
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -415,62 +491,89 @@ visualizacion.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>Contacto</h2>
-      <form action="#" method="GET">
-        <fieldset>
-          <legend>Envíanos tu consulta</legend>
-
-          <p>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
-          </p>
-
-          <p>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="tu@email.com">
-          </p>
-
-          <p>
-            <label for="tipo">Tipo de consulta:</label><br>
-            <select id="tipo" name="tipo">
-              <option value="tarifas">Tarifas</option>
-              <option value="abonados">Abonos</option>
-              <option value="plazas">Plazas</option>
-              <option value="otros">Otros</option>
-            </select>
-          </p>
-
-          <p>
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" cols="30" placeholder="Escribe aquí..."></textarea>
-          </p>
-
-          <p>
-            <button type="submit">Enviar</button>
-          </p>
-        </fieldset>
-      </form>
+      <h2>Contacta con nosotros</h2>
+      <p>
+        Resolvemos consultas sobre tarifas, abonados, plazas y accesos.
+        Tiempo medio de respuesta: 24/48h (inventado).
+      </p>
 
       <article>
-        <h3>Enlace externo</h3>
-        <p>Política legal: <a href="https://www.parking-guemi.es/legal" target="_blank" rel="noopener">ver</a></p>
+        <h3>Formulario</h3>
+        <form action="#" method="GET">
+          <fieldset>
+            <legend>Datos de la consulta</legend>
+
+            <p>
+              <label for="nombre">Nombre y apellidos:</label><br>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana García">
+            </p>
+
+            <p>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            </p>
+
+            <p>
+              <label for="matricula">Matrícula (si aplica):</label><br>
+              <input type="text" id="matricula" name="matricula" placeholder="1234ABC">
+            </p>
+
+            <p>
+              <label for="tipo">Tipo de consulta:</label><br>
+              <select id="tipo" name="tipo">
+                <option value="tarifas">Tarifas</option>
+                <option value="abonados">Abonos</option>
+                <option value="plazas">Plazas</option>
+                <option value="accesos">Accesos</option>
+                <option value="otros">Otros</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="mensaje">Mensaje:</label><br>
+              <textarea id="mensaje" name="mensaje" rows="6" cols="35"
+                placeholder="Escribe aquí tu consulta..."></textarea>
+            </p>
+
+            <p>
+              <button type="submit">Enviar</button>
+              <button type="reset">Limpiar</button>
+            </p>
+          </fieldset>
+        </form>
+      </article>
+
+      <article>
+        <h3>Otras vías de contacto (inventadas)</h3>
+        <ul>
+          <li>Teléfono: 900 123 456</li>
+          <li>Email: info@parking-guemi.es</li>
+          <li>Oficina: Planta 0, junto al ascensor</li>
+        </ul>
+
+        <p>
+          Consulta la <a href="https://www.parking-guemi.es/legal" target="_blank" rel="noopener">nota legal</a>.
+        </p>
       </article>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p><a href="index.html">Inicio</a> · <a href="visualizacion.html">Visualización XML</a></p>
   </footer>
 </body>
 </html>
-
 
 //accesos.html
 
@@ -479,12 +582,16 @@ visualizacion.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Registro de accesos del Parking GUEMI: entradas y salidas.">
   <title>Parking GUEMI - Accesos</title>
 </head>
 <body>
   <header>
     <h1>Parking GUEMI</h1>
-    <img src="img/logo.png" alt="Logo Parking GUEMI" width="140">
+    <figure>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Registro de entradas y salidas</figcaption>
+    </figure>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -492,46 +599,91 @@ visualizacion.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>Registro de accesos</h2>
-      <p>Tabla completa en <a href="parking_view.xml">XML + XSLT</a>.</p>
+      <h2>Tipos de evento</h2>
+      <ol>
+        <li>entrada</li>
+        <li>salida</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Registro (muestra)</h2>
+      <p>
+        Esta tabla incluye registros de ejemplo basados en el XML. Para ver todo:
+        <a href="visualizacion.html">Visualización XML</a>.
+      </p>
+
+      <table style="border: 1px solid black;" cellpadding="6" cellspacing="2" width="100%">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Evento</th>
+          <th scope="col">Fecha/Hora</th>
+          <th scope="col">Matrícula</th>
+          <th scope="col">Plaza ref</th>
+          <th scope="col">Comentario</th>
+        </tr>
+        <tr>
+          <td>R-001</td>
+          <td>entrada</td>
+          <td>2025-12-01T07:45:00</td>
+          <td>1234KLM</td>
+          <td>PZ-001</td>
+          <td>Entrada en hora de oficina (inventado)</td>
+        </tr>
+        <tr>
+          <td>R-002</td>
+          <td>entrada</td>
+          <td>2025-12-01T08:10:00</td>
+          <td>5678BCD</td>
+          <td>PZ-003</td>
+          <td>Ocupación moto en planta -1 (inventado)</td>
+        </tr>
+        <tr>
+          <td>R-003</td>
+          <td>salida</td>
+          <td>2025-12-01T08:25:00</td>
+          <td>9999ZZZ</td>
+          <td>(sin plaza)</td>
+          <td>Salida rápida (plaza no registrada) (inventado)</td>
+        </tr>
+        <tr>
+          <td>R-004</td>
+          <td>entrada</td>
+          <td>2025-12-01T06:55:00</td>
+          <td>9012FGH</td>
+          <td>PZ-006</td>
+          <td>Vehículo eléctrico · recarga disponible (inventado)</td>
+        </tr>
+      </table>
 
       <article>
-        <h3>Eventos posibles (lista ordenada)</h3>
-        <ol>
-          <li>entrada</li>
-          <li>salida</li>
-        </ol>
-      </article>
-
-      <article>
-        <h3>Muestra de registros</h3>
-        <table style="border:1px solid black;" cellpadding="5" cellspacing="2" width="100%">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Evento</th>
-            <th scope="col">Fecha/Hora</th>
-            <th scope="col">Matrícula</th>
-            <th scope="col">Plaza</th>
-          </tr>
-          <tr><td>R-001</td><td>entrada</td><td>2025-12-01T07:45:00</td><td>1234KLM</td><td>PZ-001</td></tr>
-          <tr><td>R-003</td><td>salida</td><td>2025-12-01T08:25:00</td><td>9999ZZZ</td><td>(sin plaza)</td></tr>
-        </table>
+        <h3>Buenas prácticas (inventadas)</h3>
+        <ul>
+          <li>Si tu matrícula no aparece en el ticket, revisa el cajero antes de salir.</li>
+          <li>En horas punta, utiliza el acceso de la calle lateral (inventado).</li>
+          <li>Para abonados, se recomienda comprobar vigencia antes de entrar.</li>
+        </ul>
       </article>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p><a href="index.html">Inicio</a> · <a href="contacto.html">Contacto</a></p>
   </footer>
 </body>
 </html>
+
 
 //abonados.html
 
@@ -540,12 +692,16 @@ visualizacion.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gestión informativa de abonados del Parking GUEMI.">
   <title>Parking GUEMI - Abonados</title>
 </head>
 <body>
   <header>
     <h1>Parking GUEMI</h1>
-    <img src="img/logo.png" alt="Logo Parking GUEMI" width="140">
+    <figure>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Abonados y vigencias</figcaption>
+    </figure>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -553,36 +709,74 @@ visualizacion.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>Abonados</h2>
-      <p>Consulta completa en <a href="parking_view.xml">XML + XSLT</a>.</p>
+      <h2>Abonados activos (muestra)</h2>
+      <p>
+        Aquí se muestra un ejemplo. El detalle completo se puede consultar desde el XML:
+        <a href="visualizacion.html">Visualización XML</a>.
+      </p>
 
-      <table style="border:1px solid black;" cellpadding="5" cellspacing="2" width="100%">
+      <table style="border: 1px solid black;" cellpadding="6" cellspacing="2" width="100%">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Tipo</th>
           <th scope="col">Nombre</th>
-          <th scope="col">Tarifa</th>
+          <th scope="col">Matrícula</th>
+          <th scope="col">Vigencia</th>
+          <th scope="col">Tarifa asociada</th>
         </tr>
-        <tr><td>A-001</td><td>mensual</td><td>María López</td><td>T-002</td></tr>
-        <tr><td>A-002</td><td>nocturno</td><td>Carlos Pérez</td><td>T-003</td></tr>
-        <tr><td>A-003</td><td>mensual</td><td>Lucía Sánchez</td><td>T-002</td></tr>
+        <tr>
+          <td>A-001</td>
+          <td>mensual</td>
+          <td>María López</td>
+          <td>1111AAA</td>
+          <td>2025-01-01 a 2025-12-31</td>
+          <td>T-002</td>
+        </tr>
+        <tr>
+          <td>A-002</td>
+          <td>nocturno</td>
+          <td>Carlos Pérez</td>
+          <td>2222BBB</td>
+          <td>2025-06-01 a 2025-12-31</td>
+          <td>T-003</td>
+        </tr>
+        <tr>
+          <td>A-003</td>
+          <td>mensual</td>
+          <td>Lucía Sánchez</td>
+          <td>3333CCC</td>
+          <td>2025-09-01 a 2026-08-31</td>
+          <td>T-002</td>
+        </tr>
       </table>
+
+      <article>
+        <h3>Ventajas del abono (inventadas)</h3>
+        <ul>
+          <li>Acceso más rápido en horas punta.</li>
+          <li>Asistencia prioritaria ante incidencias.</li>
+          <li>Recordatorio de renovación (cuando está disponible, inventado).</li>
+        </ul>
+      </article>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p><a href="tarifas.html">Ver tarifas</a> · <a href="contacto.html">Contacto</a></p>
   </footer>
 </body>
 </html>
-
 
 //plazas.html
 
@@ -591,12 +785,16 @@ visualizacion.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plazas del Parking GUEMI: tipos, estado y recomendaciones.">
   <title>Parking GUEMI - Plazas</title>
 </head>
 <body>
   <header>
     <h1>Parking GUEMI</h1>
-    <img src="img/logo.png" alt="Logo Parking GUEMI" width="140">
+    <figure>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Plazas y ocupación</figcaption>
+    </figure>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -604,48 +802,99 @@ visualizacion.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>Estado de plazas</h2>
-      <p>Listado detallado en <a href="parking_view.xml">XML + XSLT</a>.</p>
+      <h2>Tipos de plaza</h2>
+      <p>
+        El parking cuenta con varias categorías de plaza para cubrir necesidades distintas.
+      </p>
+
+      <ul>
+        <li><strong>Coche:</strong> plazas estándar.</li>
+        <li><strong>Moto:</strong> plazas compactas.</li>
+        <li><strong>PMR:</strong> plazas accesibles para movilidad reducida.</li>
+        <li><strong>Eléctrico:</strong> plazas con punto de carga.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Estado actual (muestra)</h2>
+      <p>
+        En esta tabla aparece un ejemplo de plazas. Para el listado completo desde XML:
+        <a href="visualizacion.html">Visualización XML</a>.
+      </p>
+
+      <table style="border: 1px solid black;" cellpadding="6" cellspacing="2" width="100%">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Planta</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Notas</th>
+        </tr>
+        <tr>
+          <td>PZ-001</td>
+          <td>-1</td>
+          <td>coche</td>
+          <td>ocupada</td>
+          <td>Entrada registrada · matrícula visible en XML</td>
+        </tr>
+        <tr>
+          <td>PZ-002</td>
+          <td>-1</td>
+          <td>coche</td>
+          <td>libre</td>
+          <td>Recomendada para estancias cortas (inventado)</td>
+        </tr>
+        <tr>
+          <td>PZ-004</td>
+          <td>0</td>
+          <td>pmr</td>
+          <td>libre</td>
+          <td>Acceso cercano al ascensor (inventado)</td>
+        </tr>
+        <tr>
+          <td>PZ-005</td>
+          <td>0</td>
+          <td>coche</td>
+          <td>mantenimiento</td>
+          <td>No disponible: revisión de sensores</td>
+        </tr>
+        <tr>
+          <td>PZ-006</td>
+          <td>1</td>
+          <td>electrico</td>
+          <td>ocupada</td>
+          <td>Carga activa en horario permitido (inventado)</td>
+        </tr>
+      </table>
 
       <article>
-        <h3>Tipos de plaza (lista)</h3>
-        <ul>
-          <li>Coche</li>
-          <li>Moto</li>
-          <li>PMR</li>
-          <li>Eléctrico</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Ejemplo de tabla (muestra)</h3>
-        <table style="border:1px solid black;" cellpadding="5" cellspacing="2" width="100%">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Planta</th>
-            <th scope="col">Tipo</th>
-            <th scope="col">Estado</th>
-          </tr>
-          <tr><td>PZ-001</td><td>-1</td><td>coche</td><td>ocupada</td></tr>
-          <tr><td>PZ-002</td><td>-1</td><td>coche</td><td>libre</td></tr>
-          <tr><td>PZ-006</td><td>1</td><td>electrico</td><td>ocupada</td></tr>
-        </table>
+        <h3>Recomendaciones de aparcamiento</h3>
+        <ol>
+          <li>Si buscas rapidez, planta 0 suele tener mejor salida (inventado).</li>
+          <li>Para recarga eléctrica, revisa disponibilidad antes de entrar.</li>
+          <li>Evita zonas marcadas como “mantenimiento”.</li>
+        </ol>
       </article>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p><a href="index.html">Inicio</a> · <a href="contacto.html">Contacto</a></p>
   </footer>
 </body>
 </html>
+
 
 //tarifas.html
 
@@ -654,12 +903,16 @@ visualizacion.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tarifas del Parking GUEMI: rotación y abonos.">
   <title>Parking GUEMI - Tarifas</title>
 </head>
 <body>
   <header>
     <h1>Parking GUEMI</h1>
-    <img src="img/logo.png" alt="Logo Parking GUEMI" width="140">
+    <figure>
+      <img src="img/logo.png" alt="Logo Parking GUEMI" width="160">
+      <figcaption>Tarifas y modalidades</figcaption>
+    </figure>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -667,54 +920,81 @@ visualizacion.html
         <li><a href="plazas.html">Plazas</a></li>
         <li><a href="abonados.html">Abonados</a></li>
         <li><a href="accesos.html">Accesos</a></li>
+        <li><a href="visualizacion.html">Visualización XML</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
+    <hr>
   </header>
 
   <main>
     <section>
-      <h2>Tarifas del parking</h2>
-      <p>Consulta la tabla completa en <a href="parking_view.xml">XML + XSLT</a>.</p>
+      <h2>Tarifas disponibles</h2>
+      <p>
+        Estas tarifas son las modalidades más comunes del parking.
+        Para ver el detalle exacto desde el XML: <a href="visualizacion.html">Visualización XML</a>.
+      </p>
 
-      <table style="border:1px solid black;" cellpadding="5" cellspacing="2" width="100%">
+      <table style="border: 1px solid black;" cellpadding="6" cellspacing="2" width="100%">
         <tr>
-          <th scope="col">Tipo</th>
+          <th scope="col">Modalidad</th>
           <th scope="col">Descripción</th>
-          <th scope="col">Detalles</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Condiciones</th>
         </tr>
         <tr>
           <td>Rotación</td>
-          <td>Rotación por horas</td>
-          <td>2,20 €/hora · Máx diario 18 €</td>
+          <td>Estancias por horas</td>
+          <td>2,20 €/hora</td>
+          <td>Máximo diario 18,00 €</td>
         </tr>
         <tr>
-          <td>Abono</td>
           <td>Abono mensual</td>
-          <td>95 €/mes · Acceso 24h</td>
+          <td>Acceso frecuente</td>
+          <td>95,00 €/mes</td>
+          <td>Acceso 24h: Sí</td>
         </tr>
         <tr>
-          <td>Abono</td>
           <td>Abono nocturno</td>
-          <td>55 €/mes · Sin acceso 24h</td>
+          <td>Ideal para turnos de noche</td>
+          <td>55,00 €/mes</td>
+          <td>Acceso 24h: No</td>
         </tr>
       </table>
 
       <article>
-        <h3>Notas</h3>
+        <h3>Preguntas frecuentes</h3>
         <ul>
-          <li>Los precios son orientativos (ver XML oficial).</li>
-          <li>Para abonados, se recomienda revisar vigencias.</li>
+          <li><strong>¿Hay descuento por varios meses?</strong> Sí, packs trimestrales (inventado).</li>
+          <li><strong>¿Se puede cambiar de abono?</strong> Sí, con aviso de 7 días (inventado).</li>
+          <li><strong>¿Qué métodos de pago hay?</strong> Tarjeta y efectivo en cajero (inventado).</li>
         </ul>
+      </article>
+
+      <article>
+        <h3>Enlace externo útil</h3>
+        <p>
+          Consulta condiciones generales en:
+          <a href="https://www.parking-guemi.es/legal" target="_blank" rel="noopener">Nota legal</a>
+        </p>
       </article>
     </section>
   </main>
 
   <footer>
+    <hr>
     <p>&copy; 2026 Parking GUEMI · Proyecto LLMM</p>
+    <p><a href="index.html">Volver a inicio</a> · <a href="contacto.html">Contacto</a></p>
   </footer>
 </body>
 </html>
 
 
 
+//parking dtd.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE parking SYSTEM "parking.dtd">
+<parking>
+  <!-- pega aquí TODO el contenido exactamente igual al parking.xml original -->
+</parking>
