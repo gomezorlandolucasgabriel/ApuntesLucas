@@ -2,7 +2,7 @@ package ejercicios.ud2;
 
 import java.util.ArrayList;
 
-public class Ejercicio9 {
+public class ejercicio9 {
 
     public static void main(String[] args) {
         ArrayList<String> cola = new ArrayList<>();

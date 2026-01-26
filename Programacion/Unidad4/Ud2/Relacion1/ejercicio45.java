@@ -2,7 +2,7 @@ package ejercicios.ud2;
 
 import java.util.ArrayList;
 
-public class Ejercicio45 {
+public class ejercicio45 {
 
     public static void main(String[] args) {
 

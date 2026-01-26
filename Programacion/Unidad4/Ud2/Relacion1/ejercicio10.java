@@ -2,7 +2,7 @@ package ejercicios.ud2;
 
 import java.util.ArrayList;
 
-public class Ejercicio10 {
+public class ejercicio10 {
 
     public static void main(String[] args) {
         ArrayList<Integer> pila = new ArrayList<>();

@@ -2,7 +2,7 @@ package ejercicios.ud3.r0;
 
 import java.util.Scanner;
 
-public class Ejercicio10 {
+public class ejercicio10 {
 
     public static double areaTriangulo(double base, double altura) {
         return base * altura / 2;

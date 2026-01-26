@@ -20,7 +20,7 @@ package ejercicios.ud3.r0;
 // let minimo = menorDeTres(3, 7, 1)
 // console.log(minimo)
 
-public class Ejercicio9 {
+public class ejercicio9 {
     
     public static int menorDeTres (int numero1, int numero2, int numero3){
         int minimo = numero1;

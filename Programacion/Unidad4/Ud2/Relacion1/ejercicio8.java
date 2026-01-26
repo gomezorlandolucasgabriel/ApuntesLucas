@@ -3,7 +3,7 @@ package ejercicios.ud2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Ejercicio8 {
+public class ejercicio8 {
 
     public static void main(String[] args) {
         ArrayList<Integer> numeros = new ArrayList<>(Arrays.asList(100, 200, 300));

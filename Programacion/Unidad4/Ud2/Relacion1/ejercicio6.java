@@ -3,7 +3,7 @@ package ejercicios.ud2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Ejercicio6 {
+public class ejercicio6 {
 
     public static void main(String[] args) {
 

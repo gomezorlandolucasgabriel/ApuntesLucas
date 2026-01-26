@@ -2,7 +2,7 @@ package ejercicios.ud3.r0;
 
 import java.util.Scanner;
 
-public class Ejercicio17 {
+public class ejercicio17 {
     public static String revertirCadena(String cadena) {
         String cadenaRevertida = "";
         for (int i = cadena.length(); i > 0; i--) {

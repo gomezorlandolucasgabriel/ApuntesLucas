@@ -1,6 +1,6 @@
 package ejercicios.ud3.r0;
 
-public class Ejercicio8 {
+public class ejercicio8 {
 
 
     //Funcion para saber el numero mas grande

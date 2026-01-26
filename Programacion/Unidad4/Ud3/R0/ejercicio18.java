@@ -2,7 +2,7 @@ package ejercicios.ud3.r0;
 
 import java.util.Scanner;
 
-public class Ejercicio18 {
+public class ejercicio18 {
     public static int contarVocalesEnCadena(String cadenaTexto) {
         int cantidadVocales = 0;
         char caracterTexto;
