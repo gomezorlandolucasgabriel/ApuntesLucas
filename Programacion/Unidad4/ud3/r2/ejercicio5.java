@@ -1,0 +1,9 @@
+package ejercicios.ud3.r2;
+
+import java.util.Scanner;
+
+public class ejercicio5 {
+    
+
+
+}
