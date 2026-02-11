@@ -1,0 +1,177 @@
+/* 1. ESTILOS GLOBALES */
+/* Uso del selector universal para reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+#contenedor-principal {
+    background-color: #0f0f0f; /* Temática oscura antipirateo */
+    color: #ffffff;
+    font-family: Arial, sans-serif; /* */
+    line-height: 1.6;
+}
+
+/* 2. ENCABEZADO */
+.header-campana {
+    display: flex; /* */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 3px solid #e74c3c; /* Detalle visual */
+}
+
+.titulo-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.menu-navegacion ul {
+    display: flex;
+    list-style: none; /* Elimina estilos de lista */
+}
+
+.menu-navegacion ul li {
+    margin-left: 20px;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Efecto hover y enlace activo */
+.menu-navegacion a:hover {
+    color: #e74c3c;
+}
+
+.enlace-activo {
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 5px;
+}
+
+/* 3. SECCIÓN HERO */
+#hero-impacto {
+    height: 60vh; /* Altura destacada con unidades relativas */
+    display: flex;
+    flex-direction: column; /* */
+    justify-content: center;
+    align-items: center;
+    background-image: url('fondo-pirateria.jpg'); /* */
+    text-align: center;
+}
+
+.boton-accion {
+    background-color: #e74c3c;
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    /* transition y transform (no mencionados en UD4) */
+    transition: 0.3s;
+}
+
+.boton-accion:hover {
+    background-color: #c0392b;
+    transform: scale(1.1); 
+}
+
+/* 4. SECCIÓN DE RECURSOS (TARJETAS) */
+.contenedor-recursos {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap; /* Para adaptación a pantalla */
+}
+
+.tarjeta-recurso {
+    flex: 1 1 300px; /* Flexibilidad total */
+    margin: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+}
+
+/* Selector de descendientes para la imagen */
+.tarjeta-recurso img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Selector de hijo directo para el título */
+.tarjeta-recurso > h3 {
+    margin-top: 15px;
+    color: #e74c3c;
+}
+
+/* 5. SECCIÓN DE AMENAZAS */
+.seccion-amenazas {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+.perfil-amenaza {
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+}
+
+/* Estilos diferentes por clase específica */
+.amenaza-alta { background-color: #441111; }
+.amenaza-media { background-color: #333311; }
+
+/* Selector de hermanos adyacentes (+) */
+/* Al pasar el ratón por la imagen, cambia el color del nombre (h4) */
+.perfil-amenaza img:hover + h4 {
+    color: #ff0000;
+}
+
+/* 6. SECCIÓN DE EVENTOS */
+#eventos-lista {
+    list-style: none;
+    padding: 40px;
+}
+
+/* Selector combinado ul > li */
+#eventos-lista > li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #222;
+}
+
+/* Tercer evento con estilo diferente (usando una clase específica) */
+.evento-destacado {
+    border-left: 5px solid #e74c3c;
+    background-color: #333 !important;
+}
+
+.fecha-evento {
+    font-weight: bold;
+    color: #e74c3c;
+    display: block;
+}
+
+/* 7. PIE DE PÁGINA */
+.footer-campana {
+    background-color: #050505;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociales {
+    display: flex;
+    list-style: none;
+}
+
+.redes-sociales li {
+    margin-right: 15px;
+}
+
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
