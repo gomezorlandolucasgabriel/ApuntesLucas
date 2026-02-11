@@ -1,0 +1,73 @@
+/* Selector universal para reseteo y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4; /* Color base de la página */
+    font-family: 'Georgia', serif; /* Tipografía para el cuerpo */
+    color: #333; /* Color base de texto */
+}
+
+/* Títulos con tipografía distinta */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Limitación de ancho y centrado */
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Separación lateral */
+}
+
+.topbar {
+    display: flex; /* Alineación en la misma línea */
+    justify-content: space-between; /* Separación correcta */
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #000; /* Separador visual */
+}
+
+.nav__list {
+    display: flex; /* Enlaces en horizontal */
+    list-style: none; /* Quitar viñetas */
+}
+
+.nav__link {
+    text-decoration: none; /* Quitar subrayado */
+    color: #000;
+    margin-left: 20px;
+}
+
+.nav__link:hover {
+    color: #e60000; /* Efecto visual al pasar el ratón */
+}
+
+.nav__link--active {
+    font-weight: bold; /* Sección activa */
+}
+.hero {
+    display: flex;
+    flex-direction: column; /* Organización vertical */
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: url('falla.jpg'); /* Fondo */
+    background-size: cover; /* Ajuste de imagen */
+    background-position: center;
+}
+
+.hero__cta {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: 0.3s; /* (No está en UD4, pero necesario para el efecto) */
+}
+
+.hero__cta:hover {
+    transform: scale(1.1); /* Transformación en hover (No está en UD4) */
+}
