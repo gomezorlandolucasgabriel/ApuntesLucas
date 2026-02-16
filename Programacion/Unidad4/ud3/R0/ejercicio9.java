@@ -1,4 +1,4 @@
-package ejercicios.ud3.r0;
+package Programacion.Unidad4.ud3.R0;
 
 // 9. Obtener el menor de tres números
 // Crea una función llamada menorDeTres que reciba tres números y

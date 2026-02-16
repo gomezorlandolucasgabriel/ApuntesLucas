@@ -1,8 +1,8 @@
-package ejercicios.ud1.r3;
+package Programacion.Unidad4.Ud1.R3;
 
 import java.util.Scanner;
 
-public class Ejercicio9 {
+public class ejercicio9 {
     public static void main(String[] args) {
         int numeroUsuario, primerdigito, segundodigito, suma = 0;
         boolean numeroDosCifras;

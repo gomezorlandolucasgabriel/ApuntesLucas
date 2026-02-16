@@ -1,7 +1,7 @@
-package ejercicios;
+package Programacion.Unidad4.Pt;
 import java.util.Scanner;
 
-public class pt1V2 {
+public class pt1v2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         final int STOCKMADERAINICIAL;

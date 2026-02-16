@@ -1,10 +1,9 @@
-package ejercicios.ud1.r1;
-
+package Programacion.Unidad4.Ud1.R1;
 import java.util.Scanner;
 
 //    - Pide al usuario cuántos caramelos tiene y cuántos niños hay. 
 //    Calcula cuántos caramelos recibe cada niño y cuántos sobran.
-public class Ejercicio9 {
+public class ejercicio9 {
     public static void main(String[] args) {
 
         int numeroDeCaramelos, numeroDeNinios, caramelosPorNinio, restoDeCaramelos;

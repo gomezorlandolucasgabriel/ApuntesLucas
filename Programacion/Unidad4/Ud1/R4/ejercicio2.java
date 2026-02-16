@@ -1,8 +1,8 @@
-package ejercicios.ud1.r4;
+package Programacion.Unidad4.Ud1.R4;
 
 import java.util.Scanner;
 
-public class Ejercicio2 {
+public class ejercicio2 {
     public static void main(String[] args) {
         int numeroIntroducido;
         int intento;

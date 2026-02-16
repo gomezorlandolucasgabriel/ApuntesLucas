@@ -1,8 +1,8 @@
-package ejercicios.ud1.r6;
+package Programacion.Unidad4.Ud1.R6;
 
 import java.util.Scanner;
 
-public class Ejercicio6 {
+public class ejercicio6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numero1, numero2, resultado = 0;

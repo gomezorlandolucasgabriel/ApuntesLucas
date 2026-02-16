@@ -1,8 +1,8 @@
-package ejercicios.ud1.r3;
+package Programacion.Unidad4.Ud1.R3;
 
 import java.util.Scanner;
 
-public class Ejercicio7 {
+public class ejercicio7 {
     public static void main(String[] args) {
         int resultado = 0;
         int operando1;

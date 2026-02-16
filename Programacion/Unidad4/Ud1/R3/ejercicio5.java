@@ -11,9 +11,9 @@
     //     console.log(numeroUsuario + " si está entre 10 y 20.")
     // }
 
-package ejercicios.ud1.r3;
+package Programacion.Unidad4.Ud1.R3;
 import java.util.Scanner;
-public class Ejercicio5 {
+public class ejercicio5 {
     public static void main(String[] args) {
         int numeroUsuario;
         Scanner scanner1 = new Scanner(System.in);

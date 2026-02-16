@@ -1,8 +1,8 @@
-package ejercicios.ud1.r6;
+package Programacion.Unidad4.Ud1.R6;
 
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class ejercicio1 {
     public static void main(String[] args) {
 
         final int NOTAMINIMA = 0, NOTAMAXIMA = 10, NOTAPARAAPROBAR = 5, PARARPROGRAMA = -1;
@@ -11,7 +11,7 @@ public class Ejercicio1 {
         Scanner scanner = new Scanner(System.in);
 
         while (notaAlumno != PARARPROGRAMA) {
-            System.o ut.print("Ingresa la nota del alumno " + contadorAlumnos + ": ");
+            System.out.print("Ingresa la nota del alumno " + contadorAlumnos + ": ");
             notaAlumno = scanner.nextInt();
 
             if (notaAlumno >= NOTAMINIMA && notaAlumno <= NOTAMAXIMA) {

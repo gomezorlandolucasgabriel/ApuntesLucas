@@ -1,4 +1,4 @@
-package ejercicios.ud3.r0;
+package Programacion.Unidad4.ud3.R0;
 
 import java.util.Scanner;
 

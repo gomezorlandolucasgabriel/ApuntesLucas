@@ -1,10 +1,10 @@
-package ejercicios.ud1.r1;
+package Programacion.Unidad4.Ud1.R1;
 
 import java.util.Scanner;
 
 //    Pide el peso del usuario y calcula cuánto 
 //    pesaría en la Luna (aproximadamente el 16.5% de su peso en la Tierra).
-public class Ejercicio5 {
+public class ejercicio5 {
     public static void main(String[] args) {
         final double GRAVEDADLUNA = 0.165;
         Scanner scanner = new Scanner(System.in);
